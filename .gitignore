@@ -1,0 +1,29 @@
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+credentials*
+secrets*
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# Caches
+.cache/
+cache/
+
+# Runtime files
+*.sock
+*.pid
+
+# Backups
+*.bak
+
+# SwayNC backup
+swaync.backup/

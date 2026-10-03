@@ -1,0 +1,7 @@
+* {
+  surface: #1a1110;
+  surface-variant: #534341;
+  on-surface: #f1dedc;
+  primary: #ffb4ac;
+  on-primary: #561e1a;
+}

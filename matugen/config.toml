@@ -1,0 +1,47 @@
+[config]
+
+[templates.waybar]
+input_path = '~/.config/matugen/templates/waybar-colors.css'
+output_path = '~/.config/waybar/colors.css'
+post_hook = 'pkill -SIGUSR2 waybar'
+
+[templates.rofi]
+input_path = '~/.config/matugen/templates/rofi-colors.rasi'
+output_path = '~/.config/rofi/colors.rasi'
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty-colors.conf'
+output_path = '~/.config/kitty/colors.conf'
+post_hook = 'pkill -USR1 kitty'
+
+[templates.hyprland]
+input_path = '~/.config/matugen/templates/hypr-colors.lua'
+output_path = '~/.config/hypr/matugen_colors.lua'
+post_hook = 'hyprctl reload'
+
+[templates.swaync]
+input_path = '~/.config/matugen/templates/waybar-colors.css'
+output_path = '~/.config/swaync/colors.css'
+post_hook = 'swaync-client -rs'
+
+[templates.btop]
+input_path = '~/.config/matugen/templates/btop.theme'
+output_path = '~/.config/btop/themes/matugen.theme'
+post_hook = 'pkill -SIGUSR2 btop || true'
+
+[templates.cava]
+input_path = '~/.config/matugen/templates/cava-config'
+output_path = '~/.config/cava/config'
+post_hook = 'pkill -USR2 cava || true'
+
+[templates.hyprlock]
+input_path = '~/.config/matugen/templates/hyprlock-colors.conf'
+output_path = '~/.config/hypr/hyprlock-colors.conf'
+
+[templates.gtk3]
+input_path = '~/.config/matugen/templates/gtk.css'
+output_path = '~/.config/gtk-3.0/gtk.css'
+
+[templates.gtk4]
+input_path = '~/.config/matugen/templates/gtk.css'
+output_path = '~/.config/gtk-4.0/gtk.css'

@@ -1,0 +1,55 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 34,
+  "margin-top": 6,
+  "margin-left": 10,
+  "margin-right": 10,
+  "spacing": 8,
+
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock"],
+  "modules-right": ["tray", "pulseaudio", "backlight", "network", "bluetooth", "cpu", "memory", "battery"],
+
+  "hyprland/workspaces": { "format": "{id}", "on-click": "activate", "all-outputs": true },
+  "hyprland/window": { "max-length": 40, "separate-outputs": true },
+
+  "clock": {
+    "format": "{:%a %d %b   %H:%M}",
+    "tooltip-format": "<tt>{calendar}</tt>"
+  },
+  "pulseaudio": {
+    "format": "VOL {volume}%",
+    "format-muted": "MUTED",
+    "scroll-step": 5,
+    "on-click": "pavucontrol"
+  },
+  "backlight": {
+    "format": "BRI {percent}%",
+    "on-scroll-up": "brightnessctl set 5%+",
+    "on-scroll-down": "brightnessctl set 5%-"
+  },
+  "network": {
+    "format-wifi": "{essid}",
+    "format-ethernet": "wired",
+    "format-disconnected": "offline",
+    "tooltip-format": "{ifname}  {ipaddr}  {signalStrength}%",
+    "on-click": "kitty -e nmtui"
+  },
+  "bluetooth": {
+    "format": "BT",
+    "format-disabled": "BT off",
+    "format-connected": "BT {num_connections}",
+    "on-click": "blueman-manager"
+  },
+  "cpu": { "format": "CPU {usage}%", "interval": 3 },
+  "memory": { "format": "RAM {percent}%", "interval": 5 },
+  "battery": {
+    "bat": "BAT1",
+    "format": "BAT {capacity}%",
+    "format-charging": "CHG {capacity}%",
+    "states": { "warning": 25, "critical": 10 }
+  },
+
+  "tray": { "spacing": 8 }
+}

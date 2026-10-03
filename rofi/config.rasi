@@ -1,0 +1,59 @@
+@import "colors.rasi"
+
+configuration {
+  modi: "drun,run,window";
+  show-icons: true;
+  icon-theme: "Papirus-Dark";
+  font: "JetBrainsMono Nerd Font 12";
+  drun-display-format: "{name}";
+  display-drun: "Apps";
+}
+
+* {
+  background-color: transparent;
+  text-color: @on-surface;
+}
+
+window {
+  width: 560px;
+  background-color: @surface;
+  border: 2px;
+  border-color: @primary;
+  border-radius: 16px;
+}
+
+mainbox {
+  padding: 14px;
+  spacing: 10px;
+  children: [inputbar, listview];
+}
+
+inputbar {
+  padding: 10px 14px;
+  background-color: @surface-variant;
+  border-radius: 10px;
+  spacing: 8px;
+  children: [prompt, entry];
+}
+
+prompt { text-color: @primary; }
+
+listview {
+  lines: 8;
+  columns: 1;
+  spacing: 4px;
+  scrollbar: false;
+}
+
+element {
+  padding: 8px 12px;
+  border-radius: 10px;
+  spacing: 10px;
+}
+
+element selected.normal {
+  background-color: @primary;
+  text-color: @on-primary;
+}
+
+element-icon { size: 28px; }
